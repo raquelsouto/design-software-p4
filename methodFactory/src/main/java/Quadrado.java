@@ -21,8 +21,8 @@ public class Quadrado extends Figura {
 
     @Override
     public String toString() {
-        return "Quadrado{" +
-                "lado=" + lado +
+        return "Quadrado {" +
+                "área = " + area() +
                 '}';
     }
 }

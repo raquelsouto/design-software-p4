@@ -1,4 +1,4 @@
-public class Circulo extends Figura{
+public class Circulo extends Figura {
 
     private double raioLado;
     private static final double PI = 3.14;
@@ -16,14 +16,16 @@ public class Circulo extends Figura{
     }
 
     @Override
-    public String toString() {
-        return "Circulo{" +
-                "raioLado=" + raioLado +
-                '}';
-    }
-
-    @Override
     public double area() {
         return (raioLado * PI);
     }
+
+    @Override
+    public String toString() {
+        return "Circulo {" +
+                "área = " + area() +
+                '}';
+    }
 }
+
+

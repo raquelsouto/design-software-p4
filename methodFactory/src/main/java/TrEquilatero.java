@@ -1,6 +1,6 @@
 public class TrEquilatero extends Figura {
 
-    public double lado;
+    private double lado;
 
     public TrEquilatero(double lado) {
         this.lado = lado;
@@ -21,8 +21,8 @@ public class TrEquilatero extends Figura {
 
     @Override
     public String toString() {
-        return "TrEquilatero{" +
-                "lado=" + lado + 
+        return "TrEquilatero {" +
+                "área = " + area() +
                 '}';
     }
 }
