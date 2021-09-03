@@ -1,5 +1,7 @@
 package br.cesed.si.map.abstractfactory.exemplo1.ios;
 
+import javax.swing.JOptionPane;
+
 import br.cesed.si.map.abstractfactory.exemplo1.PopUp;
 
 public class PopUpIos extends PopUp {
@@ -10,7 +12,7 @@ public class PopUpIos extends PopUp {
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
+		JOptionPane.showMessageDialog(null, super.getTitle());
 	}
 
 }
