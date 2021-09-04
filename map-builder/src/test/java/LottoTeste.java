@@ -12,7 +12,6 @@ public class LottoTeste {
     @BeforeEach
     public void setup() {
         lotto = new Lotto("/lotto/{id}", 5, 200);
-        lotto = new Lotto("/lotto/{id}", 5, 200);
     }
 
     @Test
