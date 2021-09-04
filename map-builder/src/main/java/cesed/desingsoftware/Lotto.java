@@ -1,15 +1,20 @@
 package cesed.desingsoftware;
 
 import cesed.desingsoftware.exceptions.UnsatisfiedRestrictionException;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.logging.Logger;
 
+@AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class Lotto {
 
     private String url;
     private int id;
+    private int statusCode;
     public static final Logger log = Logger.getLogger(Lotto.class.getName());
 
     public Lotto get(String url, int id) {
