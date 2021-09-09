@@ -1,17 +1,17 @@
-import cesed.desingsoftware.Lotto;
+import cesed.desingsoftware.LottoBuilder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class LottoTeste {
+public class LottoBuilderTeste {
 
-    private Lotto lotto;
+    private LottoBuilder lotto;
 
     @BeforeEach
     public void setup() {
-        lotto = new Lotto("/lotto/{id}", 5, 200);
+        lotto = new LottoBuilder("/lotto/{id}", 5, 200);
     }
 
     @Test
