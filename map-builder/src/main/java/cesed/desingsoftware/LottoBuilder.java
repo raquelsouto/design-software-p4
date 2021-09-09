@@ -17,7 +17,8 @@ public class LottoBuilder {
     public static final Logger log = Logger.getLogger(LottoBuilder.class.getName());
 
     public LottoBuilder get(String url, int id) {
-        log.info("Chamando a url: " + url + " com id = " + id);
+        lotto.setId(id);
+        lotto.setUrl(url);
         return this;
     }
 
@@ -51,16 +52,12 @@ public class LottoBuilder {
             log.info("Status must be a positive value!");
             throw new UnsatisfiedRestrictionException();
         }
-
-        log.info("statusCode set!");
         lotto.setStatusCode(status);
         return this;
     }
 
     public Boolean equalTo(int id) throws UnsatisfiedRestrictionException {
-        int idFake = 5;
-
-        if(id != idFake) {
+        if(id != lotto.getId()) {
             log.warning("Id is not equal to parameter!");
             return false;
         }

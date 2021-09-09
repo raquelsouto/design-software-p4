@@ -22,11 +22,11 @@ public class Lotto {
         int fakeCode = 200;
 
         if (fakeCode != status) {
-            throw new UnsatisfiedRestrictionException("Status esperado: " + fakeCode + "\n Status recebido: " + status);
+            throw new UnsatisfiedRestrictionException("Status expected: " + fakeCode + " Status received: " + status);
         }
 
         this.statusCode = status;
-        log.info("statusCode esperado é o mesmo do recebido");
-    }
+        log.info("statusCode set!");
 
+    }
 }
