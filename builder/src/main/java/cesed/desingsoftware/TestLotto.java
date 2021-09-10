@@ -10,11 +10,11 @@ public class TestLotto {
 
         lotto
                 .when()
-                    .get("localhost:8080/lotto{id}", 5)
+                .get("localhost:8080/lotto{id}", 5)
                 .then()
-                    .statusCode(200)
-                    .body("lotto.lottoId", lotto.equalTo(5),
-                          "lotto.winners.winnerId", lotto.hasItems(23, 54));
+                .statusCode(200)
+                .body("lotto.lottoId", lotto.equalTo(5),
+                      "lotto.winners.winnerId", lotto.hasItems(23, 54));
 
         System.out.println(lotto+ "\n");
 
@@ -22,11 +22,11 @@ public class TestLotto {
 
         lotto2
                 .when()
-                    .get("localhost:8080/lotto{id}", 4)
+                .get("localhost:8080/lotto{id}", 4)
                 .then()
-                    .statusCode(200)
-                    .body("lotto.lottoId", lotto2.equalTo(5),
-                          "lotto.winners.winnerId", lotto2.hasItems(23, 54));
+                .statusCode(200)
+                .body("lotto.lottoId", lotto2.equalTo(5),
+                     "lotto.winners.winnerId", lotto2.hasItems(23, 54));
 
         System.out.println(lotto2+ "\n");
     }
