@@ -10,4 +10,5 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.4.1 Builder](builder-pattern)
 
 ### 2. Estruturais <br />
-[2.1 Adapter](backend-adapter)
+[2.1 Adapter](backend-adapter)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 Exercicio Adapater](adapter-project)
