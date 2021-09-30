@@ -8,3 +8,6 @@
 [1.3 Abstract Factory](map-abstract-factory)   
 [1.4. Builder](builder)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.4.1 Builder](builder-pattern)
+
+### 2. Estruturais <br />
+[2.1 Adapter](backend-adapter)
