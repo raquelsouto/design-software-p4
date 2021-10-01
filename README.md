@@ -13,4 +13,4 @@
 
 ### 2. Estruturais <br />
 [2.1 Adapter](backend-adapter)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 Exercicio Adapater](adapter-project)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 Exercicio Adapter](adapter-project)
