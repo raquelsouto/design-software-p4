@@ -1,21 +1,13 @@
-public class Icpp extends TemplateMethodImposto {
+public class Icpp extends Imposto {
 
     public Icpp(double orcamento, Item item) {
         super(orcamento, item);
     }
 
-    @Override
-    public boolean calcularComImpostoMaximo(double orcamento, Item item) {
-        return orcamento > 500;
-    }
-
-    @Override
-    public double calculaImpostoAlto(double orcamento, Item item) {
-        return orcamento * 0.07;
-    }
-
-    @Override
-    public double calculaImpostoMenor(double orcamento, Item item) {
+    public double calculaImposto(double orcamento, Item item) {
+        if(orcamento > 500) {
+            return orcamento * 0.07;
+        }
         return orcamento * 0.05;
     }
 

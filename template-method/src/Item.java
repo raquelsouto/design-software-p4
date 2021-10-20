@@ -3,15 +3,21 @@ import java.util.List;
 
 public class Item {
 
+    private String nomeItem;
     private double valorItem;
     private List<Item> listaDeItens = new ArrayList<Item>();
 
-    public Item(double valorItem) {
+    public Item(String nomeItem, double valorItem) {
+        this.nomeItem = nomeItem;
         this.valorItem = valorItem;
     }
 
     public double getValorItem() {
         return valorItem;
+    }
+
+    public String getNomeItem() {
+        return nomeItem;
     }
 
     public List<Item> getListaDeItens() {
@@ -24,6 +30,10 @@ public class Item {
 
     public void setListaDeItens(List<Item> listaDeItens) {
         this.listaDeItens = listaDeItens;
+    }
+
+    public void setNomeItem(String nomeItem) {
+        this.nomeItem = nomeItem;
     }
 
     public void adicionaItem(Item item) {

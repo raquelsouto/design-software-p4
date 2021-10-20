@@ -1,33 +1,18 @@
-public class Ikcv extends TemplateMethodImposto {
+public class Ikcv extends Imposto {
 
     public Ikcv(double orcamento, Item item) {
         super(orcamento, item);
     }
 
-    @Override
-    public boolean calcularComImpostoMaximo(double orcamento, Item item) {
-        return orcamento > 500 && procurarItemCaro();
-    }
-
-    @Override
-    public double calculaImpostoAlto(double orcamento, Item item) {
-        return orcamento * 0.1;
-    }
-
-    @Override
-    public double calculaImpostoMenor(double orcamento, Item item) {
+    public double calculaImposto(double orcamento, Item item) {
+        if(orcamento > 500 && procurarItemCaro(item)) {
+            return orcamento * 0.1;
+        }
         return orcamento * 0.06;
     }
 
-    public boolean calculaImposto(double orcamento, double valorItem) {
-        if(orcamento > 500 && procurarItemCaro()) {
-            return true;
-        }
-        return false;
-    }
-
-    private boolean procurarItemCaro() {
-        for (Item item : getItem().getListaDeItens()) {
+    private boolean procurarItemCaro(Item item) {
+        for (Item itens : item.getListaDeItens()) {
             if (item.getValorItem() > 100) {
                 return true;
             }
