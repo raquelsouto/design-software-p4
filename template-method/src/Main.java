@@ -5,26 +5,42 @@ public class Main {
         Item item1 = new Item("celular", 1500);
         Item item2 = new Item("travesseiro", 180);
 
-        Icpp icpp = new Icpp(1500, item1);
-        Ikcv ikcv = new Ikcv(120, item2);
+        TemplateMethodImposto templateIcpp = new Icpp(1500, item1);
 
-        System.out.println("ICPP");
-        double resultado1 = icpp.calculaImposto(1500, item1);
-        System.out.printf("Imposto R$ " + "%.2f", resultado1);
+        TemplateMethodImposto templateIkcv = new Ikcv(120, item2);
+
+        System.out.println("ICPP\n");
+        boolean r1 = templateIcpp.calcularImpostoMaximo(5000, item1);
+        System.out.println(r1);
+        double v1 = templateIcpp.calculaImpostoAlto(5000, item1);
+        System.out.printf("Imposto R$ " + "%.2f", v1);
 
         System.out.println();
-        double resultado2 = icpp.calculaImposto(10000, item1);
-        System.out.printf("Imposto R$ " + "%.2f", resultado2);
+
+        boolean r2 = templateIcpp.calcularImpostoMaximo(100, item1);
+        System.out.println(r2);
+        double v2 = templateIcpp.calculaImpostoBaixo(100, item1);
+        System.out.printf("Imposto R$ " + "%.2f", v2);
 
         System.out.println("\n");
 
         System.out.println("IKCV");
-        double result = ikcv.calculaImposto(360, item2);
-        System.out.printf("Imposto R$ " + "%.2f", result);
+        boolean r3 = templateIkcv.calcularImpostoMaximo(3600, item2);
+        System.out.println(r3);
+        double v3 = templateIkcv.calculaImpostoAlto(360, item2);
+        System.out.printf("Imposto R$ " + "%.2f", v3);
+        System.out.println("\n");
 
-        System.out.println();
-        double result2 = ikcv.calculaImposto(4500, item1);
-        System.out.printf("Imposto R$ " + "%.2f", result2);
+        boolean r4 = templateIkcv.calcularImpostoMaximo(1000, item2);
+        System.out.println(r4);
+        double v4 = templateIkcv.calculaImpostoAlto(1000, item2);
+        System.out.printf("Imposto R$ " + "%.2f", v4);
+        System.out.println("\n");
+
+        boolean r5 = templateIkcv.calcularImpostoMaximo(600, item2);
+        System.out.println(r4);
+        double v5 = templateIkcv.calculaImpostoBaixo(660, item2);
+        System.out.printf("Imposto R$ " + "%.2f", v5);
     }
 
 }
