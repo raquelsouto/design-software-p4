@@ -13,8 +13,13 @@
 
 ### 2. Estruturais <br />
 [2.1 Adapter](backend-adapter)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 Exercicio Adapter](adapter-project)   
-[2.2 Observer](padrao-observer)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 Exercicio Adapter](adapter-project) 
+[2.2 Facade](map-facade)  
+[2.3 Proxy](proxy-pattern)  
+[2.2 Composite](map-composite)   
+
+### 3. Comportamentais <br />
+[3.1 Observer](padrao-observer)   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2.1 Exercicio Observer](exercicio-observer)   
-[2.3 Template Method](template-method)    
+[3.2 Template Method](template-method)    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.3.1 Exercicio Template Method](exerc-templ-method)   
