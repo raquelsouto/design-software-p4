@@ -17,7 +17,7 @@
 [2.2 Facade](map-facade)  
 [2.3 Proxy](proxy-pattern)  
 [2.2 Composite](map-composite)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.2 Exercicio Composite](exercicio-composite)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2.1 Exercicio Composite](exercicio-composite)   
 
 ### 3. Comportamentais <br />
 [3.1 Observer](padrao-observer)   
