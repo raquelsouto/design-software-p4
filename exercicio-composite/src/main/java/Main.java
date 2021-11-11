@@ -1,41 +1,31 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         System.out.println("Realizando a soma..");
-        Operacao primeiraOperacao = new Operacao(5, "+", 10);
+        Operacao primeiraOperacao = new Operacao(new ConstanteNumerica(5), "+", new ConstanteNumerica(10));
         int resultado = primeiraOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + primeiraOperacao.getPrimeiroValor() + " + " + primeiraOperacao.getSegundoValor() + " = " + resultado);
+        System.out.println("O resultado da expressão é = " + resultado);
 
         System.out.println("\nRealizando a subtração..");
-        Operacao segundaOperacao = new Operacao(20, "-", 10);
+        Operacao segundaOperacao = new Operacao(new ConstanteNumerica(20), "-", new ConstanteNumerica(10));
         int resultado2 = segundaOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + segundaOperacao.getPrimeiroValor() + " - " + segundaOperacao.getSegundoValor() + " = " + resultado2);
+        System.out.println("O resultado da expressão é = " + resultado2);
 
         System.out.println("\nRealizando a multiplicação..");
-        Operacao terceiraOperacao = new Operacao(9, "*", 9);
+        Operacao terceiraOperacao = new Operacao(new ConstanteNumerica(9), "-", new ConstanteNumerica(9));
         int resultado3 = terceiraOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + terceiraOperacao.getPrimeiroValor() + " * " + terceiraOperacao.getSegundoValor() + " = " + resultado3);
+        System.out.println("O resultado da expressão é = " + resultado3);
 
         System.out.println("\nRealizando a divisão..");
-        Operacao quartaOperacao = new Operacao(56, "/", 4);
+        Operacao quartaOperacao = new Operacao(new ConstanteNumerica(56), "-", new ConstanteNumerica(4));
         int resultado4 = quartaOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + quartaOperacao.getPrimeiroValor() + " / " + quartaOperacao.getSegundoValor() + " = " + resultado4);
+        System.out.println("O resultado da expressão é = " + resultado4);
 
         System.out.println("\nPara uma expressão inválida..");
-        Operacao testeOperacao = new Operacao(56, ",", 4);
+        Operacao testeOperacao = new Operacao(new ConstanteNumerica(0), ",", new ConstanteNumerica(1));
         int resultado5 = testeOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + testeOperacao.getPrimeiroValor() + " , " + testeOperacao.getSegundoValor() + " = " + resultado5 + "\n");
-
-        System.out.println("Primeiro teste da constante");
-        ConstanteNumerica constante = new ConstanteNumerica(4);
-        int resultConst = constante.resolverExpressaoNumerica();
-        System.out.println("Valor inserido: " + resultConst);
-
-        System.out.println("\nSegundo teste da constante");
-        ConstanteNumerica constante2 = new ConstanteNumerica(45);
-        int resultConst2 = constante2.resolverExpressaoNumerica();
-        System.out.println("Valor inserido: " + resultConst2);
+        System.out.println("O resultado da expressão é = " + resultado5);
 
     }
 }

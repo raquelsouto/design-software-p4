@@ -9,6 +9,6 @@ public abstract class ExpressaoNumerica {
 
     private int valor;
 
-    public abstract int resolverExpressaoNumerica();
+    public abstract int resolverExpressaoNumerica() throws Exception;
 
 }

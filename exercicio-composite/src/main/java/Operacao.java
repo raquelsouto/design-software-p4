@@ -1,20 +1,17 @@
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Logger;
 
 @Data
 public class Operacao extends ExpressaoNumerica {
 
-    private int primeiroValor;
+    private ExpressaoNumerica primeiroValor;
     private String operador;
-    private int segundoValor;
-    List<ExpressaoNumerica> listaDeExpressaoNumerica = new ArrayList<ExpressaoNumerica>();
+    private ExpressaoNumerica segundoValor;
 
     public static final Logger log = Logger.getLogger(Operacao.class.getName());
 
-    public Operacao(int primeiroValor, String operador, int segundoValor) {
+    public Operacao(ExpressaoNumerica primeiroValor, String operador, ExpressaoNumerica segundoValor) {
         super();
         this.primeiroValor = primeiroValor;
         this.operador = operador;
@@ -22,19 +19,19 @@ public class Operacao extends ExpressaoNumerica {
     }
 
     @Override
-    public int resolverExpressaoNumerica() {
+    public int resolverExpressaoNumerica()  throws Exception {
         switch (operador) {
             case "+":
-                return this.primeiroValor + this.segundoValor;
+                return this.primeiroValor.resolverExpressaoNumerica() + segundoValor.resolverExpressaoNumerica();
             case "-":
-                return this.primeiroValor - this.segundoValor;
+                return this.primeiroValor.resolverExpressaoNumerica() - this.segundoValor.resolverExpressaoNumerica();
             case "*":
-                return this.primeiroValor * this.segundoValor;
+                return this.primeiroValor.resolverExpressaoNumerica() * this.segundoValor.resolverExpressaoNumerica();
             case "/":
-                return this.primeiroValor / this.segundoValor;
+                return this.primeiroValor.resolverExpressaoNumerica() / this.segundoValor.resolverExpressaoNumerica();
             default:
-                log.warning("Expressão inválida. Por favor, tente novamente");
-                return 0;
+                log.warning("Operador inválido. Por favor, tente novamente");
+                throw new Exception();
         }
     }
 
