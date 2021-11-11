@@ -17,9 +17,10 @@
 [2.2 Facade](map-facade)  
 [2.3 Proxy](proxy-pattern)  
 [2.2 Composite](map-composite)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1.2 Exercicio Composite](exercicio-composite)   
 
 ### 3. Comportamentais <br />
 [3.1 Observer](padrao-observer)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2.1 Exercicio Observer](exercicio-observer)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.3.1 Exercicio Observer](exercicio-observer)   
 [3.2 Template Method](template-method)    
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.3.1 Exercicio Template Method](exerc-templ-method)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.3.2 Exercicio Template Method](exerc-templ-method)   
