@@ -25,6 +25,17 @@ public class Main {
         System.out.println("\nPara uma expressão inválida..");
         Operacao testeOperacao = new Operacao(56, ",", 4);
         int resultado5 = testeOperacao.resolverExpressaoNumerica();
-        System.out.println("O resultado da expressão " + testeOperacao.getPrimeiroValor() + " , " + testeOperacao.getSegundoValor() + " = " + resultado5);
+        System.out.println("O resultado da expressão " + testeOperacao.getPrimeiroValor() + " , " + testeOperacao.getSegundoValor() + " = " + resultado5 + "\n");
+
+        System.out.println("Primeiro teste da constante");
+        ConstanteNumerica constante = new ConstanteNumerica(4);
+        int resultConst = constante.resolverExpressaoNumerica();
+        System.out.println("Valor inserido: " + resultConst);
+
+        System.out.println("\nSegundo teste da constante");
+        ConstanteNumerica constante2 = new ConstanteNumerica(45);
+        int resultConst2 = constante2.resolverExpressaoNumerica();
+        System.out.println("Valor inserido: " + resultConst2);
+
     }
 }
